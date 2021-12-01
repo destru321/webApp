@@ -14,6 +14,22 @@
 </head>
 <body>
     <header class="header">
+        <div class="header__navBar">
+            <h2 class="header__heading">
+                BrandName
+            </h2>
+            <div class="menu__icons--wrapper">
+                <div class="header__accIcon" id="accIcon">
+                    <span class="material-icons">&#xe7ff;</span>
+                </div>
+                <div class="header__cartIcon" id="cartIcon">
+                    <span class="material-icons">&#xe8cc;</span>
+                </div>
+                <div class="header__hamburgerIcon" id="hamburgerIcon">
+                    <span class="material-icons">&#xe5d2;</span>
+                </div>
+            </div>
+        </div>
         <ul class="header__list" id="headerNav">
             <li class="header__item">
                 <h3 id="computerComponents">
@@ -180,7 +196,7 @@
                     </ul>
                 </nav>
             </li>
-            <li class="header__item">
+            <li class="header__item header__item--accesories">
                 <h3 id="accesories">
                     Accesories
                 </h3>
@@ -214,22 +230,44 @@
                 </nav>
             </li>
         </ul>
-        
-        <div class="header__navBar">
-            <h2 class="header__heading">
-                BrandName
+        <div class="header__cart" id="headerCart">
+            <h2>
+                Cart
             </h2>
-            <div class="menu__icons--wrapper">
-                <div class="header__acc">
-                    <span class="material-icons">&#xe7ff;</span>
+            <div class="product">
+                <div class="product__picture">
+
                 </div>
-                <div class="header__cart">
-                    <span class="material-icons">&#xe8cc;</span>
-                </div>
-                <div class="header__hamburgerIcon" id="hamburgerIcon">
-                    <span class="material-icons">&#xe5d2;</span>
-                </div>
+                <h3>
+                    Product name
+                </h3>
+                <p class="product__paragraph">
+                    Product price
+                </p>
             </div>
+            <button class="cart__button">
+                Go to cart
+            </button>
+        </div>
+        <div class="header__signIn" id="headerSignIn">
+            <h2>Sign in</h2>
+            <form action="">
+                <div>
+                    <label for="username">
+                        Username
+                    </label>
+                    <br>
+                    <input type="text" name="username" class="header__input">
+                </div>
+                <div>
+                    <label for="password">
+                        Password
+                    </label>
+                    <br>
+                    <Input type="password" name="password" class="header__input"></Input>
+                </div>
+                <input type="button" value="Sign in" class="signIn__button">
+            </form>
         </div>
     </header>
     <main class="main">

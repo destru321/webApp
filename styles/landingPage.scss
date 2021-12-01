@@ -14,6 +14,7 @@ $green: #3FA52D;
 $lightGreen: #71C562;
 
 .header {
+    font-family: 'Montserrat', sans-serif;
     &__list {
         margin: 0;
         padding: 0;
@@ -25,7 +26,6 @@ $lightGreen: #71C562;
     }
 
     &__item {
-        font-family: 'Montserrat', sans-serif;
         list-style-type: none;
         text-align: center;
         border-bottom: $black 2px solid;
@@ -43,6 +43,81 @@ $lightGreen: #71C562;
         .navigation--visible {
             display: block;
         }
+    }
+    
+    &__item--accesories{
+        border-bottom: 3px $black solid;
+    }
+
+    &__cart {
+        text-align: center;
+        display: none;
+        border-bottom: $black 3px solid;
+        .product {
+
+            &__picture {
+                background-color: $darkGray;
+                width: 175px;
+                height: 175px;
+                border-radius: 10px;
+                margin: 0 auto;
+                margin-top: 10px;
+            }
+            &__paragraph {
+                margin: 40px 0 25px;
+            }
+
+
+        }
+
+        .cart__button {
+            width: 200px;
+            height: 40px;
+            border: 2px solid $green;
+            border-radius: 20px;
+            background-color: transparent;
+            color: $lightGreen;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 25px;
+        }
+
+    }
+
+    .cart--visible {
+        display: block;
+    }
+
+    &__signIn {
+        text-align: center;
+        border-bottom: 3px solid $black;
+        display: none;
+
+        .signIn__button {
+            width: 200px;
+            height: 40px;
+            font-family: 'Roboto', sans-serif;
+            background-color: transparent;
+            border: 2px $darkGray solid;
+            border-radius: 20px;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .header__signIn--visible {
+        display: block;
+    }
+
+    &__input {
+        margin: 5px 0 25px;
+        padding: 6px 10px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        border-radius: 10px;
+        border-color: $darkGray;
+        border-style: solid;
     }
 
     &__navBar {
@@ -63,8 +138,8 @@ $lightGreen: #71C562;
         }
     }
 
-    &__acc,
-    &__cart,
+    &__accIcon,
+    &__cartIcon,
     &__hamburgerIcon {
         height: 28px;
     }
@@ -72,6 +147,7 @@ $lightGreen: #71C562;
 
 .main {
     margin-bottom: 100px;
+
     &__heading {
         text-align: center;
         margin-top: 50px;
