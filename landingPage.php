@@ -14,7 +14,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__navBar">
+        <div class="header__navBar" id="headerNavBar">
             <h2 class="header__heading">
                 BrandName
             </h2>

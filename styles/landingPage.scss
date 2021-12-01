@@ -13,6 +13,12 @@ $lightGray: #F4F4F4;
 $green: #3FA52D;
 $lightGreen: #71C562;
 
+@mixin mediumPhoneScreen {
+    @media only screen and (min-width: 375px) {
+        @content
+    }
+}
+
 .header {
     font-family: 'Montserrat', sans-serif;
     &__list {
@@ -37,6 +43,10 @@ $lightGreen: #71C562;
                 text-align: center;
                 padding: 0;
                 padding-bottom: 20px;
+            }
+
+            &__item {
+                margin-bottom: 10px;
             }
         }
 
@@ -125,6 +135,7 @@ $lightGreen: #71C562;
         display: flex;
         justify-content:space-between;
         align-items: center;
+        width: calc(100%-20px);
 
         .menu__icons--wrapper {
             width: 125px;
@@ -165,12 +176,16 @@ $lightGreen: #71C562;
     }
 
     .card--wrapper {
-        width: 250px;
+        width: min-content;
         background-color: $lightGray;
         border: 3px solid $gray;
         border-radius: 20px;
         margin: 0 auto;
         padding: 10px;
+
+        @include mediumPhoneScreen() {
+            padding: 20px;
+        }
     }
 
     .card {
@@ -202,7 +217,7 @@ $lightGreen: #71C562;
 
     .arrow {
         border: solid 2px $black;
-        width: 46px;
+        width: 42px;
         height: 38px;
         margin: 0;
         border-radius: 100%;
@@ -218,17 +233,16 @@ $lightGreen: #71C562;
     }
 
     .left-arrow {
-        transform: translateX(30px);
+        transform: translateX(20px);
     }
 
     .right-arrow {
-        transform: translateX(-30px);
+        transform: translateX(-20px);
     }
 }
 
 .footer {
     height: 50px;
-    width: 100vw;
     margin: -8px;
     padding: 0;
     background-color: $gray;

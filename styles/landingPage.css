@@ -34,6 +34,10 @@ body {
   padding-bottom: 20px;
 }
 
+.header__item .navigation__item {
+  margin-bottom: 10px;
+}
+
 .header__item .navigation--visible {
   display: block;
 }
@@ -120,6 +124,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: calc(100%-20px);
 }
 
 .header__navBar .menu__icons--wrapper {
@@ -170,12 +175,20 @@ body {
 }
 
 .main .card--wrapper {
-  width: 250px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   background-color: #F4F4F4;
   border: 3px solid #E8E8E8;
   border-radius: 20px;
   margin: 0 auto;
   padding: 10px;
+}
+
+@media only screen and (min-width: 375px) {
+  .main .card--wrapper {
+    padding: 20px;
+  }
 }
 
 .main .card {
@@ -207,7 +220,7 @@ body {
 
 .main .arrow {
   border: solid 2px #000;
-  width: 46px;
+  width: 42px;
   height: 38px;
   margin: 0;
   border-radius: 100%;
@@ -229,18 +242,17 @@ body {
 }
 
 .main .left-arrow {
-  -webkit-transform: translateX(30px);
-          transform: translateX(30px);
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
 }
 
 .main .right-arrow {
-  -webkit-transform: translateX(-30px);
-          transform: translateX(-30px);
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
 }
 
 .footer {
   height: 50px;
-  width: 100vw;
   margin: -8px;
   padding: 0;
   background-color: #E8E8E8;

@@ -25,6 +25,7 @@ const cartIcon = document.getElementById('cartIcon');
 const headerSignIn = document.getElementById('headerSignIn');
 const accIcon = document.getElementById('accIcon');
 
+const headerNavBar = document.getElementById('headerNavBar');
 
 hamburgerIcon.addEventListener('click', () => {
     headerNav.classList.toggle('header__list--visible');
