@@ -289,6 +289,33 @@
                             Product price
                         </p>
                     </div>
+                    <div class="card card--invisible">
+                        <div class="card__img"></div>
+                        <h3 class="card__name">
+                            Product name
+                        </h3>
+                        <p class="card__desc">
+                            Product price
+                        </p>
+                    </div>
+                    <div class="card card--invisible">
+                        <div class="card__img"></div>
+                        <h3 class="card__name">
+                            Product name
+                        </h3>
+                        <p class="card__desc">
+                            Product price
+                        </p>
+                    </div>
+                    <div class="card card--invisible1">
+                        <div class="card__img"></div>
+                        <h3 class="card__name">
+                            Product name
+                        </h3>
+                        <p class="card__desc">
+                            Product price
+                        </p>
+                    </div>
                 </div>
                 <div class="arrow  right-arrow">
                     <span class="material-icons">&#xe5cc;</span>
@@ -313,6 +340,33 @@
                             Product price
                         </p>
                     </div>
+                    <div class="card card--invisible">
+                        <div class="card__img"></div>
+                        <h3 class="card__name">
+                            Product name
+                        </h3>
+                        <p class="card__desc">
+                            Product price
+                        </p>
+                    </div>
+                    <div class="card card--invisible">
+                        <div class="card__img"></div>
+                        <h3 class="card__name">
+                            Product name
+                        </h3>
+                        <p class="card__desc">
+                            Product price
+                        </p>
+                    </div>
+                    <div class="card card--invisible1">
+                        <div class="card__img"></div>
+                        <h3 class="card__name">
+                            Product name
+                        </h3>
+                        <p class="card__desc">
+                            Product price
+                        </p>
+                    </div>
                 </div>
                 <div class="arrow  right-arrow">
                     <span class="material-icons">&#xe5cc;</span>
@@ -328,7 +382,34 @@
                     <span class="material-icons">&#xe5cb;</span>
                 </div>
                 <div class="card--wrapper">
-                    <div class="card">
+                    <div class="card ">
+                        <div class="card__img"></div>
+                        <h3 class="card__name">
+                            Product name
+                        </h3>
+                        <p class="card__desc">
+                            Product price
+                        </p>
+                    </div>
+                    <div class="card card--invisible">
+                        <div class="card__img"></div>
+                        <h3 class="card__name">
+                            Product name
+                        </h3>
+                        <p class="card__desc">
+                            Product price
+                        </p>
+                    </div>
+                    <div class="card card--invisible">
+                        <div class="card__img"></div>
+                        <h3 class="card__name">
+                            Product name
+                        </h3>
+                        <p class="card__desc">
+                            Product price
+                        </p>
+                    </div>
+                    <div class="card card--invisible1">
                         <div class="card__img"></div>
                         <h3 class="card__name">
                             Product name
