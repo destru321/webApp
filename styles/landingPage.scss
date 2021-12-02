@@ -15,7 +15,25 @@ $lightGreen: #71C562;
 
 @mixin mediumPhoneScreen {
     @media only screen and (min-width: 375px) {
-        @content
+        @content;
+    }
+}
+
+@mixin largePhoneScreen {
+    @media only screen and (min-width: 425px) {
+        @content;
+    }
+}
+
+@mixin laptopScreen {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin largeLaptopScreen {
+    @media only screen and (min-width: 1440px) {
+        @content;
     }
 }
 
@@ -35,6 +53,9 @@ $lightGreen: #71C562;
         list-style-type: none;
         text-align: center;
         border-bottom: $black 2px solid;
+        h3 {
+            cursor: pointer;
+        }
 
         .navigation {
             display: none;
@@ -143,8 +164,10 @@ $lightGreen: #71C562;
             justify-content: space-between;
             align-items: center;
 
+
             .material-icons {
                 font-size: 1.75rem;
+                cursor: pointer;
             }
         }
     }
@@ -171,7 +194,7 @@ $lightGreen: #71C562;
     .card-arrows--wrapper {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         margin: -8px;
     }
 
@@ -182,6 +205,8 @@ $lightGreen: #71C562;
         border-radius: 20px;
         margin: 0 auto;
         padding: 10px;
+        display: flex;
+       
 
         @include mediumPhoneScreen() {
             padding: 20px;
@@ -194,6 +219,10 @@ $lightGreen: #71C562;
         border: 3px solid $black;
         border-radius: 15px;
         margin: 0 auto;
+        @include laptopScreen() {
+            margin: 0 30px 0;
+        }
+        
 
         &__img {
             background-color: $darkGray;
@@ -215,16 +244,33 @@ $lightGreen: #71C562;
         }
     }
 
+    .card--invisible {
+        display: none;
+        @include laptopScreen() {
+            display: block;
+        }
+    }
+
+    .card--invisible1 {
+        display: none;
+        @include largeLaptopScreen () {
+            display: block;
+        }
+    }
+
     .arrow {
         border: solid 2px $black;
         width: 42px;
         height: 38px;
-        margin: 0;
         border-radius: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: $white;
+        cursor: pointer;
+        @include largePhoneScreen() {
+            margin: 0 20px 0;
+        }
 
         .material-icons {
             font-size: 2rem;
@@ -234,11 +280,19 @@ $lightGreen: #71C562;
 
     .left-arrow {
         transform: translateX(20px);
+
+        @include largePhoneScreen() {
+            transform: translateX(0);
+        }
     }
 
     .right-arrow {
         transform: translateX(-20px);
+        @include largePhoneScreen() {
+            transform: translateX(0);
+        }
     }
+
 }
 
 .footer {

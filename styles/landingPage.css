@@ -23,6 +23,10 @@ body {
   border-bottom: #000 2px solid;
 }
 
+.header__item h3 {
+  cursor: pointer;
+}
+
 .header__item .navigation {
   display: none;
 }
@@ -142,6 +146,7 @@ body {
 
 .header__navBar .menu__icons--wrapper .material-icons {
   font-size: 1.75rem;
+  cursor: pointer;
 }
 
 .header__accIcon, .header__cartIcon, .header__hamburgerIcon {
@@ -168,9 +173,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: -8px;
 }
 
@@ -183,6 +187,9 @@ body {
   border-radius: 20px;
   margin: 0 auto;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media only screen and (min-width: 375px) {
@@ -197,6 +204,12 @@ body {
   border: 3px solid #000;
   border-radius: 15px;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .main .card {
+    margin: 0 30px 0;
+  }
 }
 
 .main .card__img {
@@ -218,11 +231,30 @@ body {
   text-align: center;
 }
 
+.main .card--invisible {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .main .card--invisible {
+    display: block;
+  }
+}
+
+.main .card--invisible1 {
+  display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  .main .card--invisible1 {
+    display: block;
+  }
+}
+
 .main .arrow {
   border: solid 2px #000;
   width: 42px;
   height: 38px;
-  margin: 0;
   border-radius: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,6 +266,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 425px) {
+  .main .arrow {
+    margin: 0 20px 0;
+  }
 }
 
 .main .arrow .material-icons {
@@ -246,9 +285,23 @@ body {
           transform: translateX(20px);
 }
 
+@media only screen and (min-width: 425px) {
+  .main .left-arrow {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 .main .right-arrow {
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
+}
+
+@media only screen and (min-width: 425px) {
+  .main .right-arrow {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .footer {
