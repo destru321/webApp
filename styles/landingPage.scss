@@ -25,6 +25,13 @@ $lightGreen: #71C562;
     }
 }
 
+@mixin tabletScreen {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+
 @mixin laptopScreen {
     @media only screen and (min-width: 1024px) {
         @content;
@@ -159,6 +166,10 @@ $lightGreen: #71C562;
         width: calc(100%-20px);
 
         .menu__icons--wrapper {
+            @include laptopScreen() {
+                width: 150px;
+            }
+            
             width: 125px;
             display: flex;
             justify-content: space-between;
@@ -171,6 +182,36 @@ $lightGreen: #71C562;
             }
         }
     }
+
+    .search {
+        @include tabletScreen() {
+            display: flex;
+        }
+
+        align-items: center;
+        display: none;
+        
+        &__text {
+            width: 300px;
+            padding: 5px 5px 5px 10px;
+            border: 2px solid black;
+            border-radius: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .search__button {
+            margin: 0;
+            background-color: transparent;
+            border: none;
+            align-self: center;
+            cursor: pointer;
+
+            .material-icons {
+                height: 28px;
+                font-size: 1.8rem;
+            }
+        }
+    }
+
 
     &__accIcon,
     &__cartIcon,
@@ -196,6 +237,21 @@ $lightGreen: #71C562;
         align-items: center;
         justify-content: space-around;
         margin: -8px;
+    }
+
+    .offersCarousel__item,
+    .newsCarousel__item,
+    .newsCarousel__item--hidden,
+    .offersCarousel__item--hidden,
+    .tutorialsCarousel__item,
+    .tutorialsCarousel__item--hidden {
+        display: none;
+    }
+
+    .offersCarousel__item--visible,
+    .newsCarousel__item--visible,
+    .tutorialsCarousel__item--visible {
+        display: flex;
     }
 
     .card--wrapper {

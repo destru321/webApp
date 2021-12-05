@@ -144,9 +144,53 @@ body {
           align-items: center;
 }
 
+@media only screen and (min-width: 1024px) {
+  .header__navBar .menu__icons--wrapper {
+    width: 150px;
+  }
+}
+
 .header__navBar .menu__icons--wrapper .material-icons {
   font-size: 1.75rem;
   cursor: pointer;
+}
+
+.header .search {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header .search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header .search__text {
+  width: 300px;
+  padding: 5px 5px 5px 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header .search .search__button {
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+}
+
+.header .search .search__button .material-icons {
+  height: 28px;
+  font-size: 1.8rem;
 }
 
 .header__accIcon, .header__cartIcon, .header__hamburgerIcon {
@@ -176,6 +220,23 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: -8px;
+}
+
+.main .offersCarousel__item,
+.main .newsCarousel__item,
+.main .newsCarousel__item--hidden,
+.main .offersCarousel__item--hidden,
+.main .tutorialsCarousel__item,
+.main .tutorialsCarousel__item--hidden {
+  display: none;
+}
+
+.main .offersCarousel__item--visible,
+.main .newsCarousel__item--visible,
+.main .tutorialsCarousel__item--visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main .card--wrapper {
